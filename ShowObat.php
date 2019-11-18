@@ -6,20 +6,20 @@
     
        $result=mysqli_query($conn, "SELECT * FROM tbl_obat");
        $response = array();
-
+        
        while( $row = mysqli_fetch_assoc($result) ){
 
         array_push($response, 
         array(
-                'ID_OBAT'           =>$row['ID_OBAT'], 
-                'NAMA_OBAT'         =>$row['NAMA_OBAT'], 
-                'MERK_OBAT'         =>$row['MERK_OBAT'],
-                'KETERANGAN'        =>$row['KETERANGAN'],
-                'HARGABELI_OBAT'    =>$row['HARGABELI_OBAT'],
-                'HARGAJUAL_OBAT'    =>$row['HARGAJUAL_OBAT'],
-                'STOK_OBAT'         =>$row['STOK_OBAT'],
-                'GAMBAR_OBAT'       =>$row['GAMBAR_OBAT'],
-                'KADALUARSA'        =>$row['KADALUARSA']) 
+                'ID_OBAT'           =>$row['id_obat'], 
+                'NAMA_OBAT'         =>$row['nama_obat'], 
+                'MERK_OBAT'         =>$row['merk_obat'],
+                'KETERANGAN'        =>$row['keterangan'],
+                'HARGABELI_OBAT'    =>$row['hargabeli_obat'],
+                'HARGAJUAL_OBAT'    =>$row['hargajual_obat'],
+                'STOK_OBAT'         =>$row['stok_obat'],
+                'GAMBAR_OBAT'       =>$row['gambar_obat'],
+                'KADALUARSA'        =>$row['kadaluarsa']) 
             );
         }
     

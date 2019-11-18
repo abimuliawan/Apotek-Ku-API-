@@ -8,14 +8,14 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     require_once 'Koneksi.php';
     
     $select=mysqli_query($conn, "SELECT * FROM tbl_pegawai WHERE 
-    USERNAME='$username' && PASSWORD='$password' ");
+    username='$username' && password='$password' ");
 
     $data = mysqli_fetch_assoc($select);
     $num_rows = mysqli_num_rows($select);
 
     if($num_rows==1)
     {
-        $data_username = $data['USERNAME'];
+        $data_username = $data['username'];
         $status= 'true' ;
         echo json_encode(array("response"=>$status,"username"=>$data_username));
     }
